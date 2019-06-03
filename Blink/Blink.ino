@@ -1,37 +1,19 @@
 /*
-  Blink
-
-  Turns an LED on for one second, then off for one second, repeatedly.
-
-  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
-  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to
-  the correct LED pin independent of which board is used.
-  If you want to know what pin the on-board LED is connected to on your Arduino
-  model, check the Technical Specs of your board at:
-  https://www.arduino.cc/en/Main/Products
-
-  modified 8 May 2014
-  by Scott Fitzgerald
-  modified 2 Sep 2016
-  by Arturo Guadalupi
-  modified 8 Sep 2016
-  by Colby Newman
-
-  This example code is in the public domain.
-
-  http://www.arduino.cc/en/Tutorial/Blink
+  이것은 주석
 */
 
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+// 이것은 한줄 주석
+
+int led = 13;//C언어 문법과 같음.
+
+void setup() {//아두이노가 켜질때 딱 한번 실행
+  pinMode(led, OUTPUT);//특정 핀을 출력 또는 입력 모드로 설정하는 명령어. 지금은 13번 핀.
+  //아두이노의 핀 부분을 담당하는 함수.
 }
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+void loop() {//setup이 실행된 다음 계속해서 반복되는 함수
+  digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);                       // wait for a second
 }
